@@ -3,7 +3,7 @@ shapeMaxSize = 8,
 shapeQuantity = 111;
 var sCanvas = document.querySelector('#shapeCanvas');
 document.querySelector('a-scene').addEventListener('render-target-loaded', generateShapes());
-document.querySelector('a-scene').addEventListener('click', regenerate());
+document.querySelector('a-scene').addEventListener('render-target-loaded', regenerate());
 function generateShapes(){
 for (var i = 0; i < shapeQuantity; i++) {
 var shapeRandomizer = Math.floor(Math.random()*6+1);
@@ -18,7 +18,7 @@ else if (shapeRandomizer==6){makeSky();}
 
 function regenerate()
 {
-  generateShapes();
+  setTimeout(() => { window.location.reload(true)}, 5000)
 };
 
 function randomColour() {

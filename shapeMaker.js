@@ -18,7 +18,7 @@ else if (shapeRandomizer==6){makeSky();}
 
 function regenerate()
 {
-  setTimeout(() => { window.location.reload(true)}, 5000)
+  setTimeout(() => { window.location.reload(true)}, 20000)
 };
 
 function randomColour() {
